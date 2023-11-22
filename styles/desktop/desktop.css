@@ -1,0 +1,12 @@
+.header{
+    justify-items: center;
+}
+
+.header__theme-menu-list {
+    flex-direction: row;
+}
+
+.header__title{
+    line-height: 129.53px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+}

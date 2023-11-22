@@ -1,0 +1,45 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
+.page {
+  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+    background-color: var(--backround-color)
+}
+.header{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100vW;
+    height: 100vH;
+    padding: 10px;
+}
+
+.header__theme-menu-list {
+    display: flex;
+}
+
+.header__theme-menu-button{
+    color: var(--nav-menu-color);
+    font-weight: 400;
+    line-height: 18px;
+    font-size: 18px;
+    padding: 0 13px;
+    border: var(--backround-color) solid 1px;
+}
+
+.header__theme-menu-button_active{
+    border: var(--nav-menu-color) solid 1px;
+}
+
+.header__theme-menu-button:hover{
+    border: rgba(var(--nav-menu-color--rgb), 0.4) solid 1px;
+}
+
+.header__theme-menu-button:focus{
+    border-bottom: var(--nav-menu-color) solid 1px;
+}
+
+.header__title{
+}
+
+.header__text{
+
+}

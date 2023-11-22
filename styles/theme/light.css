@@ -1,0 +1,20 @@
+/*
+  Специально для светлой темы при наличии класса.
+  Здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+.page.theme_light {
+    --accent-color: #FF8DCB;
+    --accent-color--rgb: 255, 141, 203 ;
+    --backround-color: #FFF1F7;
+    --font-color: #353430;
+    --font-color--rgb: 	53, 52, 48;
+    --nav-menu-color: var(--font-color);
+    --nav-menu-color--rgb: var(--font-color--rgb)
+
+}
+
+.page.theme_light .header  {
+    background: url("../../images/cover-image-light.png") center no-repeat;
+}

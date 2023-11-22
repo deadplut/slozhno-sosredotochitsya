@@ -39,4 +39,16 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  background-color: inherit;
+  border: inherit;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+
+:hover,
+:focus {
+  outline:none;
 }
