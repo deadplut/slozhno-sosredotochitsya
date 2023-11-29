@@ -1,13 +1,11 @@
-.header{
-    justify-items: end;
+.page{
+    padding: 10px;
 }
 
-.header__theme-menu-list {
-flex-direction: column;
-}
-
+.footer__title,
 .header__title{
     font-weight: 700;
     line-height: 95.7px;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
+

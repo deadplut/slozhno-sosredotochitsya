@@ -2,18 +2,97 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-    background-color: var(--backround-color)
-}
-.header{
+    background-color: var(--page-background-color);
+    background: var(--page-background-image)  no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "IBM Plex mono", monospace;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    width: 100vW;
-    height: 100vH;
-    padding: 10px;
+    grid-auto-rows: calc(100vh - 20px) min-content calc(100vh - 20px);
+    gap: clamp(40px,5.4vh, 60px);
+
+
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.link:focus {
+    outline: var(--nav-menu-color) solid 1px;
+}
+
+.header,
+.footer{
+    position: relative;
+    display: grid;
+    grid-auto-rows: 1fr;
+    justify-items: end;
+    min-block-size: calc(100vh - 20px);
+    align-items: center;
+}
+
+.header__rec{
+    position: absolute;
+    z-index: -1;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    inset-inline-end: 20px;
+    inset-block-start: 10px;
+    font-size: var(--medium-size);
+    line-height: 25px;
+}
+.header__rec::before{
+    content: "REC";
+    color: var(--color-purple-2)
+}
+
+.header__rec::after {
+    content: "";
+    background: var(--accent-color);
+    display: inline-flex;
+    border-radius: 50%;
+    inline-size: 9px;
+    block-size: 9px;
+    box-shadow: 0 0 2px 2px var(--accent-color);
+    background-color: var(--accent-color);
+}
+
+
+.decorated-zone::before,
+.decorated-zone::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inline-size: 25px;
+    block-size: 25px;
+}
+
+.decorated-zone::before {
+    border-inline-end: 1px solid var(--nav-menu-color, #ff0070);
+    border-block-start: 1px solid var(--nav-menu-color, #ff0070);
+    inset-inline-end: 0;
+    inset-block-start: 0;
+}
+
+.decorated-zone::after {
+    border-inline-start: 1px solid var(--nav-menu-color, #ff0070);
+    border-block-end: 1px solid var(--nav-menu-color, #ff0070);
+    inset-inline-start: 0;
+    inset-block-end: 0;
 }
 
 .header__theme-menu-list {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: var(--medium-size);
+    line-height: var(--medium-line-height);
 }
 
 .header__theme-menu-button{
@@ -22,24 +101,89 @@
     line-height: 18px;
     font-size: 18px;
     padding: 0 13px;
-    border: var(--backround-color) solid 1px;
+    border: var(--page-background-color) solid 1px;
 }
 
 .header__theme-menu-button_active{
     border: var(--nav-menu-color) solid 1px;
+    pointer-events: none;
 }
 
 .header__theme-menu-button:hover{
-    border: rgba(var(--nav-menu-color--rgb), 0.4) solid 1px;
+    border: var(--nav-menu-color-o-40) solid 1px;
 }
 
-.header__theme-menu-button:focus{
+.header__theme-menu-button:focus-visible{
     border-bottom: var(--nav-menu-color) solid 1px;
 }
 
+.footer__title,
 .header__title{
+    justify-self: start;
+    color: var(--title-color);
+    text-shadow: 4px 4px 0 var(--title-color-second);
+}
+
+.footer__title{
+    justify-self: center;
+}
+
+.title-decor{
+    color: var(--header-text-color);
+    background-color: var(--accent-color);
+    font-family: inherit;
+    font-size: var(--medium-size);
+    line-height: var(--medium-line-height);
 }
 
 .header__text{
-
+    justify-self: end;
+    width: max(355px, 50%);
+    align-self: center;
 }
+
+.content{
+    display: grid;
+    grid-auto-rows: min-content;
+    gap: 50px;
+}
+
+.gallery,
+.content_container{
+    display: grid;
+    grid-template-rows: repeat(3, minmax(min-content, max-content));
+    grid-auto-rows: minmax(min-content, max-content);
+    gap: 20px;
+    align-items: start;
+}
+
+.gallery_answer_subtitle,
+.content__question,
+.content__answer_subtitle,
+.content__answer_text
+{
+    line-height: 23.4px;
+    font-size: 18px;
+}
+
+
+.content__question{
+    color: var(--content-question--color);
+}
+
+.content__answer_text{
+    color: var(--font-color);
+    margin-top: 10px;
+}
+
+.gallery__item{
+    display: block;
+    width: 100%;
+}
+
+.gallery__img {
+    width: inherit;
+    /*max-height: 100%;*/
+    /*object-fit: cover;*/
+}
+

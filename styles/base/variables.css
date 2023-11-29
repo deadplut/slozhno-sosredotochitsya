@@ -3,4 +3,41 @@
   и их переопределение под различные устройства
 */
 :root {
+    --color-pink-1: #fff1f7;
+    --color-pink-2: #f1b2ce;
+    --color-pink-3: #ffc2e6;
+    --color-pink-4: #ff8dcb;
+
+    --color-purple-1: #db00ff;
+    --color-purple-2: #ff0070;
+    --color-purple-2-o-40: #ff007040;
+
+    --color-black-1: #000028;
+    --color-black-2: #353430;
+    --color-black-2-o-40: #35343040;
+
+
+
+    --accent-color: var(--color-purple-2 ,#ff0070);
+    --accent-color-o-40: var(--color-purple-2-o-40, #ff007040);
+
+    --font-color: var(--color-pink-2, #F1B2CE);
+    --title-color: var(--color-purple-1, #DB00FF);
+    --title-color-second: var(--color-purple-2 ,#ff0070);
+    --header-text: var(--color-black-1, #000028);
+
+    --page-background-color: var(--color-black-1, #000028);
+    --page-background-image: url("../../images/cover-image-dark.png");
+
+    --nav-menu-color: var(--color-purple-2 ,#ff0070);
+    --nav-menu-color-o-40: var(--color-purple-2-o-40, #ff007040);
+
+    --header-text-color: var(--color-black-1, #000028);
+
+    --medium-size: 1.125em;
+    --big-size: 7.5em;
+
+    --medium-line-height: 23.4px;
+
+
 }
