@@ -27,7 +27,7 @@
     --header-text: var(--color-black-1, #000028);
 
     --page-background-color: var(--color-black-1, #000028);
-    --page-background-image: url("../../images/cover-image-dark.png");
+    --page-background-image: url("../images/cover-image-dark.png");
 
     --nav-menu-color: var(--color-purple-2 ,#ff0070);
     --nav-menu-color-o-40: var(--color-purple-2-o-40, #ff007040);
@@ -38,6 +38,6 @@
     --big-size: 7.5em;
 
     --medium-line-height: 23.4px;
-
+    --main-font: "IBM Plex mono", monospace;
 
 }

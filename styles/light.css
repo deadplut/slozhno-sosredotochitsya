@@ -1,0 +1,77 @@
+/*
+  Специально для светлой темы при наличии класса.
+  Здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+.page.theme_light {
+    --accent-color: var(--color-pink-4, #FF8DCB);
+    --accent-color-o-40: var(--color-black-2-o-40, #ff007040);
+    --font-color: var(--color-black-2, #353430);
+    --title-color: var(--color-pink-3, #FFC2E6);
+    --title-color-second: var(--color-purple-2,#FF0070);
+    --header-text: var(--color-black-2, #353430);
+
+    --page-background-color: var(--color-pink-1, #FFF1F7);
+    --page-background-image: url("../images/cover-image-light.png");
+
+    --nav-menu-color: var(--color-black-2, #353430);
+    --nav-menu-color-o-40: var(--color-black-2-o-40, #35343040);
+    ----header-text-color: var(--font-color, #353430);
+
+    --content-question--color: var(--font-color, #353430);
+    --link-hover-outline: var(--color-pink-2)
+
+}
+
+
+@media (width < 1024px) {
+
+    .page.theme_light .footer__title,
+    .page.theme_light .header__title {
+        text-shadow: 4px 4px 0 var(--accent-color);
+    }
+}
+/* Остальные стили */
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --accent-color: var(--color-pink-4, #FF8DCB);
+        --accent-color-o-40: var(--color-black-2-o-40, #ff007040);
+        --font-color: var(--color-black-2, #353430);
+        --title-color: var(--color-pink-3, #FFC2E6);
+        --title-color-second: var(--color-purple-2,#FF0070);
+        --header-text: var(--color-black-2, #353430);
+
+        --page-background-color: var(--color-pink-1, #FFF1F7);
+        --page-background-image: url("../images/cover-image-light.png");
+
+        --nav-menu-color: var(--color-black-2, #353430);
+        --nav-menu-color-o-40: var(--color-black-2-o-40, #35343040);
+        ----header-text-color: var(--font-color, #353430);
+
+        --content-question--color: var(--font-color, #353430);
+        --link-hover-outline: var(--title-color-second);
+
+    }
+    .page.theme_light .header__rec{
+        display: none;
+    }
+
+
+    @media (width < 1024px) {
+
+        .footer__title,
+        .header__title {
+            text-shadow: 4px 4px 0 var(--accent-color);
+        }
+    }
+}
+
+/* Остальные стили */
+
+
+
+.page.theme_light .header__rec{
+    display: none;
+}

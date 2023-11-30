@@ -23,13 +23,15 @@
 
 
     --page-background-color: var(--color-black-1, #000028);
-    --page-background-image: url("../../images/cover-image-dark.png");
+    --page-background-image: url("../images/cover-image-dark.png");
 
     --nav-menu-color: var(--color-purple-2 ,#ff0070);
     --nav-menu-color-o-40: var(--color-purple-2-o-40, #ff007040);
     --header-text-color: var(--color-black-1, #000028);
 
     --content-question--color: var(--accent-color, #ff0070);
+
+    --link-hover-outline: var(--color-pink-2)
 }
 
 
