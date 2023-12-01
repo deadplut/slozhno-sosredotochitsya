@@ -16,15 +16,15 @@
 
 .link {
     text-decoration: none;
-    text-shadow: 4px 4px 0 var(--link-hover-outline);
+    text-shadow: 1px 2px 0 var(--accent-color);
 }
 
 .link:hover {
-    text-decoration: underline;
+    border-bottom: var(--link-hover-outline) solid 1px;
 }
 
 .link:focus {
-    outline: var(--nav-menu-color) solid 1px;
+    outline: var(--font-color) solid 1px;
 }
 
 .header,
@@ -277,9 +277,6 @@
         object-fit: cover;
         display: block;
     }
-
-
-    #FF8DCB
 }
 
 @media (width >= 1024px) {
@@ -361,5 +358,13 @@
     }
 
 }
+
+.header__text,
+.content__question,
+.content__answer_subtitle,
+.footer__title {
+    font-weight: bold;
+}
+
 
 

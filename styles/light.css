@@ -34,6 +34,13 @@
 }
 /* Остальные стили */
 
+@media (width < 1024px) and (prefers-color-scheme: light) {
+    .page.theme_light .footer__title,
+    .page.theme_light .header__title {
+        text-shadow: 4px 4px 0 var(--accent-color);
+    }
+}
+
 @media (prefers-color-scheme: light) {
     :root {
         --accent-color: var(--color-pink-4, #FF8DCB);
@@ -54,17 +61,8 @@
         --link-hover-outline: var(--title-color-second);
 
     }
-    .page.theme_light .header__rec{
+    .header__rec{
         display: none;
-    }
-
-
-    @media (width < 1024px) {
-
-        .footer__title,
-        .header__title {
-            text-shadow: 4px 4px 0 var(--accent-color);
-        }
     }
 }
 
