@@ -1,15 +1,15 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+    /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
     background-color: var(--page-background-color);
-    background: var(--page-background-image)  no-repeat center;
+    background: var(--page-background-image) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     font-family: var(--main-font);
     display: grid;
     grid-auto-rows: calc(100vh - 20px) min-content calc(100vh - 20px);
-    gap: clamp(40px,5.4vh, 60px);
+    gap: clamp(40px, 5.4vh, 60px);
 
 
 }
@@ -28,7 +28,7 @@
 }
 
 .header,
-.footer{
+.footer {
     position: relative;
     display: grid;
     grid-auto-rows: 1fr;
@@ -37,7 +37,7 @@
     align-items: center;
 }
 
-.header__rec{
+.header__rec {
     position: absolute;
     z-index: -1;
     display: inline-flex;
@@ -48,7 +48,8 @@
     font-size: var(--medium-size);
     line-height: 25px;
 }
-.header__rec::before{
+
+.header__rec::before {
     content: "REC";
     color: var(--color-purple-2)
 }
@@ -96,7 +97,7 @@
     line-height: var(--medium-line-height);
 }
 
-.header__theme-menu-button{
+.header__theme-menu-button {
     color: var(--nav-menu-color);
     font-weight: 400;
     line-height: 18px;
@@ -105,31 +106,31 @@
     border: var(--page-background-color) solid 1px;
 }
 
-.header__theme-menu-button_active{
+.header__theme-menu-button_active {
     border: var(--nav-menu-color) solid 1px;
     pointer-events: none;
 }
 
-.header__theme-menu-button:hover{
+.header__theme-menu-button:hover {
     border: var(--nav-menu-color-o-40) solid 1px;
 }
 
-.header__theme-menu-button:focus-visible{
+.header__theme-menu-button:focus-visible {
     border-bottom: var(--nav-menu-color) solid 1px;
 }
 
 .footer__title,
-.header__title{
+.header__title {
     justify-self: start;
     color: var(--title-color);
     text-shadow: 4px 4px 0 var(--title-color-second);
 }
 
-.footer__title{
+.footer__title {
     justify-self: center;
 }
 
-.title-decor{
+.title-decor {
     color: var(--header-text-color);
     background-color: var(--accent-color);
     font-family: inherit;
@@ -137,20 +138,20 @@
     line-height: var(--medium-line-height);
 }
 
-.header__text{
+.header__text {
     justify-self: end;
     width: max(355px, 50%);
     align-self: center;
 }
 
-.content{
+.content {
     display: grid;
     grid-auto-rows: min-content;
     gap: 50px;
 }
 
 .gallery,
-.content_container{
+.content_container {
     display: grid;
     grid-template-rows: repeat(3, minmax(min-content, max-content));
     grid-auto-rows: minmax(min-content, max-content);
@@ -161,23 +162,22 @@
 .gallery_answer_subtitle,
 .content__question,
 .content__answer_subtitle,
-.content__answer_text
-{
+.content__answer_text {
     line-height: 23.4px;
     font-size: 18px;
 }
 
 
-.content__question{
+.content__question {
     color: var(--content-question--color);
 }
 
-.content__answer_text{
+.content__answer_text {
     color: var(--font-color);
     margin-top: 10px;
 }
 
-.gallery__item{
+.gallery__item {
     display: block;
     width: 100%;
     height: 100%;
@@ -190,14 +190,13 @@
 }
 
 
-
 @media (width < 768px) {
-    .page{
+    .page {
         padding: 10px;
     }
 
     .footer__title,
-    .header__title{
+    .header__title {
         font-weight: 700;
         line-height: 95.7px;
         font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -206,30 +205,32 @@
 }
 
 @media (768px <= width < 1024px) {
-    .page{
+    .page {
         padding: 20px;
     }
 
     .footer__title,
-    .header__title{
+    .header__title {
         line-height: 99px;
         font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 
     }
 
-    .content_container{
+    .content_container {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .content_container:nth-child(odd) *:not(:first-child){
+    .content_container:nth-child(odd) *:not(:first-child) {
         grid-column-start: 2;
         grid-column-end: 4;
     }
-    .content_container:nth-child(even) *:not(:first-child){
+
+    .content_container:nth-child(even) *:not(:first-child) {
         grid-column-start: 1;
         grid-column-end: 4;
     }
-    .content__question{
+
+    .content__question {
         grid-row-start: 1;
         grid-row-end: 3;
         grid-column-start: 1;
@@ -237,41 +238,47 @@
     }
 
 
-    .gallery{
+    .gallery {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: minmax(min-content, max-content) 192px 230px 318px;
     }
-    .gallery_answer_subtitle{
+
+    .gallery_answer_subtitle {
         grid-column-start: 1;
         grid-column-end: 4;
     }
-    .gallery__item--1{
+
+    .gallery__item--1 {
         grid-column-start: 1;
         grid-column-end: 3;
         /*max-width: 100%;*/
     }
-    .gallery__item--2{
+
+    .gallery__item--2 {
         grid-column-start: 3;
         grid-column-end: 4;
         grid-row-start: 2;
         grid-row-end: 4;
     }
+
     .gallery__item--3 {
         grid-row-start: 3;
         grid-row-end: 5;
     }
+
     .gallery__item--4 {
         grid-row-start: 3;
         grid-row-end: 4;
         grid-column-start: 2;
         grid-column-end: 3;
     }
+
     .gallery__item--5 {
         grid-column-start: 2;
         grid-column-end: 4;
     }
 
-    .gallery__img{
+    .gallery__img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -280,7 +287,7 @@
 }
 
 @media (width >= 1024px) {
-    .page{
+    .page {
         padding: 20px;
     }
 
@@ -292,23 +299,25 @@
     }
 
     .footer__title,
-    .header__title{
+    .header__title {
         line-height: 129.53px;
         font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     }
 
-    .content_container{
+    .content_container {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .content_container:nth-child(odd) *:not(:first-child){
+    .content_container:nth-child(odd) *:not(:first-child) {
         grid-column-start: 2;
         grid-column-end: 4;
     }
-    .content_container:nth-child(even) *:not(:first-child){
+
+    .content_container:nth-child(even) *:not(:first-child) {
         grid-row-start: 3;
     }
-    .content__question{
+
+    .content__question {
         grid-row-start: 1;
         grid-row-end: 3;
         grid-column-start: 1;
@@ -316,41 +325,47 @@
     }
 
 
-    .gallery{
+    .gallery {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: minmax(min-content, max-content) 260px 315px 248px;
     }
-    .gallery_answer_subtitle{
+
+    .gallery_answer_subtitle {
         grid-column-start: 1;
         grid-column-end: 4;
     }
-    .gallery__item--1{
+
+    .gallery__item--1 {
         grid-column-start: 1;
         grid-column-end: 3;
         /*max-width: 100%;*/
     }
-    .gallery__item--2{
+
+    .gallery__item--2 {
         grid-column-start: 3;
         grid-column-end: 4;
         grid-row-start: 2;
         grid-row-end: 4;
     }
+
     .gallery__item--3 {
         grid-row-start: 3;
         grid-row-end: 5;
     }
+
     .gallery__item--4 {
         grid-row-start: 3;
         grid-row-end: 4;
         grid-column-start: 2;
         grid-column-end: 3;
     }
+
     .gallery__item--5 {
         grid-column-start: 2;
         grid-column-end: 4;
     }
 
-    .gallery__img{
+    .gallery__img {
         width: 100%;
         height: 100%;
         object-fit: cover;
